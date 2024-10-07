@@ -117,6 +117,6 @@ class Coating():
             try:
                 self.RI.append(Material(m).getRefractiveIndexAt(self.Wavelength))
             except:
-                self.RI.append(np.complex(m))
+                self.RI.append(complex(m))
         self.RI = np.array(self.RI)
         return
