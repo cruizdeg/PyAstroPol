@@ -169,15 +169,10 @@ class Source(Rays):
         # Create concentric distribution of rays, like "rings"
         else:
             RayDens = np.sqrt(NRays/np.pi/Rad**2)
-<<<<<<< HEAD
-            NRings = int(Rad*RayDens)
-            Rings = np.linspace(0, Rad, NRings+1)
-            NThetas = np.zeros(NRings, dtype=int)
-=======
             NRings = np.int64(Rad*RayDens)
             Rings = np.linspace(0, Rad, NRings+1)
             NThetas = np.zeros(NRings, dtype=np.int64)
->>>>>>> 0e47f602a2bf95404aadafc0abc11d702e7bb98e
+
             Radii, Thetas = np.array([]), np.array([])
             i = -1
             for i in range(NRings-1):
